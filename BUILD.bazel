@@ -1,0 +1,8 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:prefix            github.com/jotadrilo/jsonnet-gazelle
+# gazelle:repository_macro  repositories.bzl%go_repositories
+
+gazelle(
+    name = "gazelle",
+)

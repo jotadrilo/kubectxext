@@ -1,0 +1,5 @@
+# Bazel directories
+bazel-*
+
+# Editors
+.vscode
