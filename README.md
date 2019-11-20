@@ -1,17 +1,17 @@
 # kubectxext
 
-The `kubectxext` utility is meant to be used for extracting specific kube config files from large kube config files.
-kubectxext is a utility to extract a valid kubernetes config file from your kubernetes config for a given context.
+`kubectxext` is a utility to extract a valid kubernetes config file from your kubernetes config for a given context.
 
 ## Usage
 
 ![](img/kubectxext-demo.gif)
 
 ```
-USAGE:
-  kubectxext                    : prompt a select list using the information in your kubernetes config file and extracts a kube config file for the selected context.
-  kubectxext -context <NAME>    : extracts a kube config file for the provided context name.
-  kubectxext -kubeconfig <FILE> : specify the kube config file to work with (`~/.kube/config` by default)
+Usage of kubectxext:
+  -context string
+    	context to extract.
+  -kubeconfig string
+    	kube config file to extract from. (default "/Users/jotadrilo/.kube/config")
 ```
 
 ## Installation
