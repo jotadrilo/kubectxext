@@ -5,6 +5,8 @@ kubectxext is a utility to extract a valid kubernetes config file from your kube
 
 ## Usage
 
+![](img/kubectxext-demo.gif)
+
 ```
 USAGE:
   kubectxext                    : prompt a select list using the information in your kubernetes config file and extracts a kube config file for the selected context.
