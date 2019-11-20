@@ -1,0 +1,48 @@
+# http://goreleaser.com
+project_name: kubectxext
+builds:
+- goarch:
+  - amd64
+archives:
+- id: default
+  files:
+    - LICENSE
+    - README.md
+  replacements:
+    amd64: x86_64
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .FullCommit }}-{{ .Tag }}-snapshot"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+sign:
+  signature: "${artifact}.sig"
+  cmd: gpg
+  args: ["-u", "josriolop@gmail.com", "--output", "${signature}", "--detach-sign", "${artifact}"]
+  artifacts: all
+
+# Homebrew formula
+brews:
+- name: kubectxext
+  homepage: https://github.com/jotadrilo/kubectxext
+  description: CLI to extract a context from an existing kubernetes configuration file
+  url_template: "https://github.com/jotadrilo/kubectxext/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
+  github:
+    owner: jotadrilo
+    name: homebrew-tap
+  folder: formula
+  commit_author:
+    name: jotadrilo
+    email: josriolop@gmail.com
+  skip_upload: auto
+  ids:
+  - default
+  install: |
+    bin.install "kubectxext"
+  test: |
+    system bin/"kubectxext", "-help"
