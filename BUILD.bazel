@@ -1,6 +1,6 @@
 load("@bazel_gazelle//:def.bzl", "gazelle")
 
-# gazelle:prefix            github.com/jotadrilo/jsonnet-gazelle
+# gazelle:prefix            github.com/jotadrilo/kubectxext
 # gazelle:repository_macro  repositories.bzl%go_repositories
 
 gazelle(

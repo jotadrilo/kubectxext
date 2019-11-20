@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "go_default_library",
     srcs = ["config.go"],
-    importpath = "github.com/jotadrilo/jsonnet-gazelle/internal/configutil",
+    importpath = "github.com/jotadrilo/kubectxext/internal/configutil",
     visibility = ["//:__subpackages__"],
     deps = [
         "@com_github_juju_errors//:go_default_library",
