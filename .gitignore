@@ -3,3 +3,6 @@ bazel-*
 
 # Editors
 .vscode
+
+# Goreleaser directories
+dist

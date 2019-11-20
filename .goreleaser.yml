@@ -3,6 +3,8 @@ project_name: kubectxext
 builds:
 - goarch:
   - amd64
+- id: kubectxext
+  main: ./cmd/kubectxext/main.go
 archives:
 - id: default
   files:
