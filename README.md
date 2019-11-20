@@ -1,13 +1,9 @@
 # kubectxext
 
-The `
-
-
------
-
-# kubectxext
-
+The `kubectxext` utility is meant to be used for extracting specific kube config files from large kube config files.
 kubectxext is a utility to extract a valid kubernetes config file from your kubernetes config for a given context.
+
+## Usage
 
 ```
 USAGE:
@@ -15,21 +11,6 @@ USAGE:
   kubectxext -context <NAME>    : extracts a kube config file for the provided context name.
   kubectxext -kubeconfig <FILE> : specify the kube config file to work with (`~/.kube/config` by default)
 ```
-
-
-### Usage
-
-```sh
-$ kubectxext -context my-context
-Context "test" set.
-Active namespace is "kube-system".
-
-$ kubens -
-Context "test" set.
-Active namespace is "default".
-```
-
-`kubens` also supports <kbd>Tab</kbd> completion on bash/zsh/fish shells.
 
 ## Installation
 
@@ -47,8 +28,15 @@ There are several installation options:
 
 If you use [Homebrew](https://brew.sh/) you can install like this:
 
-    brew install kubectx
+    brew tap jotadrilo/tap
+    brew install jotadrilo/tap/kubectxext
 
 #### go
 
-    go get -u github.com/jotadrilo/kubectxext/cmd
+    go get github.com/jotadrilo/kubectxext/cmd/...
+
+### Linux
+
+#### go
+
+    go get github.com/jotadrilo/kubectxext/cmd/...
