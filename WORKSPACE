@@ -1,5 +1,4 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 http_archive(
     name = "io_bazel_rules_go",
@@ -38,3 +37,15 @@ gazelle_dependencies()
 load(":repositories.bzl", "go_repositories")
 
 go_repositories()
+
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
+
+git_repository(
+    name = "com_google_protobuf",
+    commit = "3cae867740e409d9b9fbc1224c35357a49ce0ce2",
+    remote = "https://github.com/protocolbuffers/protobuf",
+)
+
+load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
+
+protobuf_deps()
