@@ -44,6 +44,7 @@ git_repository(
     name = "com_google_protobuf",
     commit = "3cae867740e409d9b9fbc1224c35357a49ce0ce2",
     remote = "https://github.com/protocolbuffers/protobuf",
+    shallow_since = "1574111605 -0800",
 )
 
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
