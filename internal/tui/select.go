@@ -17,10 +17,10 @@ type Context struct {
 // of the struct, the usual dot notation is used inside the templates to
 // select the fields and color them.
 func ContextSelect(contexts []Context) *promptui.Select {
-	// The Active and Selected templates set a small pepper icon next to the
-	// name colored and the heat unit for the active template. The details
+	// The Active and Selected templates set a small helm icon next to the
+	// name colored and the cluster for the active template. The details
 	// template is show at the bottom of the select's list and displays the
-	// full info for that pepper in a multi-line template.
+	// full info for that context in a multi-line template.
 	templates := &promptui.SelectTemplates{
 		Label:    "{{ . }}?",
 		Active:   "\U00002388 {{ .Name | cyan }} ({{ .Cluster | red }})",
@@ -33,8 +33,6 @@ func ContextSelect(contexts []Context) *promptui.Select {
 {{ "Auth:" | faint }}	{{ .Auth }}`,
 	}
 
-	// A searcher function is implemented which enabled the search mode for the select. The function follows
-	// the required searcher signature and finds any pepper whose name contains the searched string.
 	searcher := func(input string, index int) bool {
 		ctx := contexts[index]
 		name := strings.Replace(strings.ToLower(ctx.Name), " ", "", -1)
