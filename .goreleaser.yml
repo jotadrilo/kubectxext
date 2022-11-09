@@ -1,5 +1,11 @@
 # http://goreleaser.com
 project_name: kubectxext
+before:
+  hooks:
+  - go mod download
+  # So far, we better do this manually
+  # - ./tools/bump-version.sh
+  # - ./tools/tag-version.sh
 builds:
 - id: kubectxext
   main: ./cmd/kubectxext/main.go
@@ -22,11 +28,19 @@ changelog:
     exclude:
     - '^docs:'
     - '^test:'
-sign:
+signs:
+- id: deafult
+  artifacts: all
   signature: "${artifact}.sig"
   cmd: gpg
-  args: ["-u", "josriolop@gmail.com", "--output", "${signature}", "--detach-sign", "${artifact}"]
-  artifacts: all
+  args:
+    - "--batch"
+    - "--local-user"
+    - "{{ .Env.GPG_FINGERPRINT }}"
+    - "--output"
+    - "${signature}"
+    - "--detach-sign"
+    - "${artifact}"
 
 # Homebrew formula
 brews:
@@ -34,7 +48,7 @@ brews:
   homepage: https://github.com/jotadrilo/kubectxext
   description: CLI to extract a context from an existing kubernetes configuration file
   url_template: "https://github.com/jotadrilo/kubectxext/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-  github:
+  tap:
     owner: jotadrilo
     name: homebrew-tap
   folder: formula

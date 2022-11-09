@@ -42,3 +42,13 @@ If you use [Homebrew](https://brew.sh/) you can install like this:
 #### go
 
     go get github.com/jotadrilo/kubectxext/cmd/...
+
+## Development
+
+This projects uses `go mod` and `bazel`.
+
+```
+bazel run //:gazelle-update-repos
+bazel run //:gazelle
+bazel run //cmd/kubectxext:kubectxext -- --help
+```
