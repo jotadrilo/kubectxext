@@ -236,8 +236,8 @@ def go_dependencies():
         name = "com_github_juju_errors",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/juju/errors",
-        sum = "h1:hJix6idebFclqlfZCHE7EUX7uqLCyb70nHNHH1XKGBg=",
-        version = "v0.0.0-20190930114154-d42613fe1ab9",
+        sum = "h1:yiq7kjCLll1BiaRuNY53MGI0+EQ3rF6GB+wvboZDefM=",
+        version = "v1.0.0",
     )
     go_repository(
         name = "com_github_juju_loggo",
@@ -271,8 +271,8 @@ def go_dependencies():
         name = "com_github_kr_pretty",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/kr/pretty",
-        sum = "h1:L/CwN0zerZDmRFUapSPitk6f+Q3+0za1rQkzVuMiMFI=",
-        version = "v0.1.0",
+        sum = "h1:Fmg33tUaq4/8ym9TJN1x7sLJnHVwhP33CNkpYV/7rwI=",
+        version = "v0.2.1",
     )
     go_repository(
         name = "com_github_kr_pty",
@@ -285,8 +285,8 @@ def go_dependencies():
         name = "com_github_kr_text",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/kr/text",
-        sum = "h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=",
-        version = "v0.1.0",
+        sum = "h1:5Nx0Ya0ZqY2ygV366QzturHI13Jq95ApcVaJBhpS+AY=",
+        version = "v0.2.0",
     )
     go_repository(
         name = "com_github_lunixbochs_vtclean",
@@ -306,8 +306,8 @@ def go_dependencies():
         name = "com_github_manifoldco_promptui",
         build_file_proto_mode = "disable_global",
         importpath = "github.com/manifoldco/promptui",
-        sum = "h1:rir7oByTERac6jhpHUPErHuopoRDvO3jxS+FdadEns8=",
-        version = "v0.3.2",
+        sum = "h1:3V4HzJk1TtXW1MTZMP7mdlwbBpIinw3HztaIlYthEiA=",
+        version = "v0.9.0",
     )
     go_repository(
         name = "com_github_mattn_go_colorable",
@@ -448,8 +448,8 @@ def go_dependencies():
         name = "in_gopkg_check_v1",
         build_file_proto_mode = "disable_global",
         importpath = "gopkg.in/check.v1",
-        sum = "h1:qIbj1fsPNlZgppZ+VLlY7N33q108Sa+fhmuc+sWQYwY=",
-        version = "v1.0.0-20180628173108-788fd7840127",
+        sum = "h1:Hei/4ADfdWqJk1ZMxUNpqntNwaWcugrBjAiHlqqRiVk=",
+        version = "v1.0.0-20201130134442-10cb98267c6c",
     )
     go_repository(
         name = "in_gopkg_fsnotify_v1",
@@ -483,8 +483,8 @@ def go_dependencies():
         name = "in_gopkg_yaml_v2",
         build_file_proto_mode = "disable_global",
         importpath = "gopkg.in/yaml.v2",
-        sum = "h1:/eiJrUcujPVeJ3xlSWaiNi3uSVmDGBK1pDHUHAnao1I=",
-        version = "v2.2.4",
+        sum = "h1:D8xgwECY7CYvx+Y2n4sBz93Jn9JRvxdiyyo8CTfuKaY=",
+        version = "v2.4.0",
     )
     go_repository(
         name = "io_k8s_apimachinery",
@@ -532,8 +532,8 @@ def go_dependencies():
         name = "io_k8s_sigs_yaml",
         build_file_proto_mode = "disable_global",
         importpath = "sigs.k8s.io/yaml",
-        sum = "h1:4A07+ZFc2wgJwo8YNlQpr1rVlgUDlxXHhPJciaPY5gs=",
-        version = "v1.1.0",
+        sum = "h1:a2VclLzOGrwOHDiV8EfBGhvjHvP46CtW5j6POvhYGGo=",
+        version = "v1.3.0",
     )
     go_repository(
         name = "org_golang_x_crypto",
