@@ -6,7 +6,7 @@ require (
 	github.com/juju/errors v0.0.0-20190930114154-d42613fe1ab9
 	github.com/manifoldco/promptui v0.3.2
 	k8s.io/client-go v11.0.0+incompatible
-	sigs.k8s.io/yaml v1.1.0
+	sigs.k8s.io/yaml v1.3.0
 )
 
 require (
@@ -33,7 +33,7 @@ require (
 	golang.org/x/tools v0.0.0-20190506145303-2d16b83fe98c // indirect
 	gopkg.in/alecthomas/kingpin.v3-unstable v3.0.0-20191105091915-95d230a53780 // indirect
 	gopkg.in/mgo.v2 v2.0.0-20190816093944-a6b53ec6cb22 // indirect
-	gopkg.in/yaml.v2 v2.2.4 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 	k8s.io/apimachinery v0.0.0-20191116203941-08e4eafd6d11 // indirect
 	k8s.io/klog v1.0.0 // indirect
 )
