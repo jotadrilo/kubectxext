@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/juju/errors v1.0.0
-	github.com/manifoldco/promptui v0.3.2
+	github.com/manifoldco/promptui v0.9.0
 	k8s.io/client-go v11.0.0+incompatible
 	sigs.k8s.io/yaml v1.3.0
 )
