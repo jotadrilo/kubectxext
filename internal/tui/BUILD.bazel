@@ -1,9 +1,0 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
-
-go_library(
-    name = "tui",
-    srcs = ["select.go"],
-    importpath = "github.com/jotadrilo/kubectxext/internal/tui",
-    visibility = ["//:__subpackages__"],
-    deps = ["@com_github_manifoldco_promptui//:promptui"],
-)

@@ -1,9 +1,0 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library")
-
-go_library(
-    name = "splitter",
-    srcs = ["splitter.go"],
-    importpath = "github.com/jotadrilo/kubectxext/internal/splitter",
-    visibility = ["//:__subpackages__"],
-    deps = ["@io_k8s_client_go//tools/clientcmd/api/v1:api"],
-)
