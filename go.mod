@@ -1,12 +1,12 @@
 module github.com/jotadrilo/kubectxext
 
-go 1.19
+go 1.22
 
 require (
 	github.com/juju/errors v1.0.0
 	github.com/manifoldco/promptui v0.9.0
 	k8s.io/client-go v11.0.0+incompatible
-	sigs.k8s.io/yaml v1.3.0
+	sigs.k8s.io/yaml v1.6.0
 )
 
 require (
@@ -28,6 +28,7 @@ require (
 	github.com/nicksnyder/go-i18n v1.10.1 // indirect
 	github.com/pelletier/go-toml v1.2.0 // indirect
 	github.com/tsenart/deadcode v0.0.0-20160724212837-210d2dc333e9 // indirect
+	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/lint v0.0.0-20181026193005-c67002cb31c3 // indirect
 	golang.org/x/sys v0.0.0-20190826190057-c7b8b68b1456 // indirect
 	golang.org/x/tools v0.0.0-20190506145303-2d16b83fe98c // indirect
